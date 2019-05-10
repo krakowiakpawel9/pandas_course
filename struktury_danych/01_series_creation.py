@@ -44,11 +44,13 @@ s[5:]
 s[::2]
 s[::3]
 
-# %% checking memberdhip
+# %% Example 8 - checking memberdhip
 stocks_price = {'Apple':196, 'CD Projet':212, 'Amazon':1877}
 stocks_price_series = pd.Series(stocks_price)
 
 'Apple' in stocks_price
 'Google' in stocks_price
 'Google' not in stocks_price
+
+
 
