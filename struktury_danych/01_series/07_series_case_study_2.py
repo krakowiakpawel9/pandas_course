@@ -34,5 +34,9 @@ for company in wig20:
         stocks_with_len_4.append(company)
 print(stocks_with_len_4)
 
-# list comprehension
-stocks_wit_len_5 = [company for company in wig20 if len(company) == 5]
+# %% list comprehension
+stocks_with_len_5 = [company for company in wig20 if len(company) == 5]
+stocks_with_first_P = [company for company in wig20 if company.startswith('P')]
+stocks_replace_spaces = [company.replace(' ', '_') for company in wig20]
+stocks_lower = [company.lower() for company in wig20]
+stocks_lower_ = [company.lower().replace(' ', '_') for company in wig20]

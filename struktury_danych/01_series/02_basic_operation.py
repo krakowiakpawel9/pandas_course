@@ -7,10 +7,8 @@ import numpy as np
 np.random.seed(0)
 
 A = np.random.randint(0, 10, 10)
-B = np.random.randint(0, 10, 10)
 
 series = pd.Series(A, name='random_int')
-
 
 # %% basic attributes
 print(series.dtype)
@@ -114,43 +112,8 @@ round_series = series_N.round(2)
 
 # shifting values
 shift_by_1 = series_N.shift(1)
-shift_by_2_replace_0 = series_N.shift(2, fill_value=0)
+shift_by_2_replace_0 = series_N.shift(2).fillna(0)
 
 # sorting values
 sorted_series = series.sort_values()    # ascending
 sorted_series_desc = series.sort_values(ascending=False)    # descending
-
-# %% aggregate - very useful
-suma = series_N.aggregate(sum)
-minimum = series_N.aggregate(min)
-maximum = series_N.aggregate(max)
-squared_values = series_N.aggregate(lambda x: x**2)
-mean = series_N.aggregate(np.mean)
-std = series_N.aggregate(np.std)
-
-# %% applying functions to Series
-series_N.apply(lambda x: 100 * x)
-
-def custom_function(x):
-    return 10 * x
-
-series_N.apply(custom_function)
-
-# %% export data
-normal_sample = np.random.randn(1000)
-normal_series = pd.Series(normal_sample)
-
-# to csv
-normal_series.to_csv('./dane/normal_sample_2.csv', sep=';',
-                     header=['value'], index=False)
-
-
-
-
-
-
-
-
-
-
-

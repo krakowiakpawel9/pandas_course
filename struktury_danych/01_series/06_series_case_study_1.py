@@ -4,12 +4,14 @@ import numpy as np
 
 
 # %% loading dataset
-path = ('C:\\Users\\krako\\OneDrive\\Pulpit\\github-repo\\pandas_course'
-        '\\struktury_danych\\dane\\cdr_d.csv')
+path_absolute = ('C:\\Users\\krako\\OneDrive\\Pulpit\\github-repo\\'
+                 'pandas_course\\struktury_danych\\01_series\\data\\cdr_d.csv')
 
-# zaladowanie danych
-df = pd.read_csv(path)
-df = pd.read_csv(path, sep=',', index_col=0)
+path_relative = './dane/cdr_d.csv'
+
+# loading data
+df = pd.read_csv(path_absolute)
+df = pd.read_csv(path_absolute, sep=',', index_col=0)
 
 # %% preprocessing the data
 close_price = df['Zamkniecie']
@@ -24,3 +26,5 @@ close_price.plot(title='Cena akcji spółki CD Projekt',
                  grid=True,
                  logy=True)
 
+# %% export data to csv
+close_price.to_csv('./data/close_price.csv', header=True)
