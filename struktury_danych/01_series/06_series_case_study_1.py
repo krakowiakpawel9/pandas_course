@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 # %% loading dataset
@@ -19,12 +20,14 @@ close_price = df['Zamkniecie']
 close_price = close_price['2010-01-01':]
 
 # %% plotting the results - lin scale
-close_price.plot()
+close_price.plot(title='Cena akcji spółki CD Projekt')
+plt.savefig('./charts/close_lin.png', format='png')
 
 # %% plotting the resutls - log scale
 close_price.plot(title='Cena akcji spółki CD Projekt',
                  grid=True,
                  logy=True)
+plt.savefig('./charts/close_log.png', format='png')
 
 # %% export data to csv
 close_price.to_csv('./data/close_price.csv', header=True)
