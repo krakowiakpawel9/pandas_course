@@ -15,6 +15,15 @@ close_price.to_csv('./dane/close_price.csv', header=['close'])
 # export to json
 close_price.to_json('./dane/close_price.json')
 
+# export to latex
+close_price.to_latex('./dane/close_price.tex')
+
+# export to python list
+close_price_list = close_price.to_list()
+
+# export to sql
+close_price.to_sql('./dane/close_price.sql')
+
 # %% import data from clipboard
 clipboard_df = pd.read_clipboard()
 
