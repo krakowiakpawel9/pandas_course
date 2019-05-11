@@ -40,6 +40,9 @@ series_N.abs()
 # adding two Series
 series_M.add(series_N)
 
+# subtracting two Series
+series_N.subtract(series_M)
+
 # dividing two Series
 series_N.divide(series_M)
 
@@ -59,29 +62,14 @@ series_N = series_N.add_prefix('dev_')
 # sufix labels
 series_M = series_M.add_suffix('_data')
 
-# aggregate values - very useful
-suma = series_N.aggregate(sum)
-minimum = series_N.aggregate(min)
-maximum = series_N.aggregate(max)
-squared_values = series_N.aggregate(lambda x: x**2)
-mean = series_N.aggregate(np.mean)
-std = series_N.aggregate(np.std)
-
 # concatenating two Series
 concat = series_N.append(series_M)
-
-# applying functions to Series
-series_N.apply(lambda x: 100 * x)
-
-def custom_function(x):
-    return 10 * x
-
-series_N.apply(custom_function)
 
 # idxmax, idxmin
 series_N.idxmax()
 series_N.idxmin()
 
+# count elements
 series_N.count()
 
 # cumulative function
@@ -90,14 +78,71 @@ series_N.cummin()
 series_N.cumprod()
 series_N.cumsum()
 
+# count unique values
+series.value_counts()
+
+# sum of values
+series_N.sum()
+
+# standard diviation
+series_N.std()
+
 # display some basic statistics about dataset
 series.describe()
 
 # histogram
 hist_data = pd.Series(np.random.randn(10000))
-hist_data.hist(bins=80)
+hist_data.hist(bins=80, color='purple')
 
+# top n elements
+top_3 = series_N.nlargest(3)
 
+# bottom n elements
+bottom_5 = series_N.nsmallest(5)
+
+# quantile
+q_1 = series_N.quantile(0.25)
+q_2 = series_N.quantile(0.5)
+median = series_N.median()
+q_3 = series_N.quantile(0.75)
+
+# ranking
+rank = series_N.rank()
+
+# round values
+round_series = series_N.round(2)
+
+# shifting values
+shift_by_1 = series_N.shift(1)
+shift_by_2_replace_0 = series_N.shift(2, fill_value=0)
+
+# sorting values
+sorted_series = series.sort_values()    # ascending
+sorted_series_desc = series.sort_values(ascending=False)    # descending
+
+# %% aggregate - very useful
+suma = series_N.aggregate(sum)
+minimum = series_N.aggregate(min)
+maximum = series_N.aggregate(max)
+squared_values = series_N.aggregate(lambda x: x**2)
+mean = series_N.aggregate(np.mean)
+std = series_N.aggregate(np.std)
+
+# %% applying functions to Series
+series_N.apply(lambda x: 100 * x)
+
+def custom_function(x):
+    return 10 * x
+
+series_N.apply(custom_function)
+
+# %% export data
+normal_sample = np.random.randn(1000)
+normal_series = pd.Series(normal_sample)
+
+# to csv
+normal_series.to_csv('./dane/normal_sample_2.csv', sep=';',
+                     header=['value'], index=False)
 
 
 
