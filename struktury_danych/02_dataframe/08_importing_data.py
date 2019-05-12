@@ -11,3 +11,5 @@ df = pd.read_csv('./data/aapl_us_d.csv', index_col=0)
 df.info()
 df.describe()
 
+# %% tsv - tab separated file
+df = pd.read_csv('./data/aapl_us_d.tsv', sep='\t')
