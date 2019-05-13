@@ -21,6 +21,7 @@ length = s.str.len()
 df = pd.DataFrame(np.random.rand(10, 2),
                   columns=['          ID value ', '  Price'])
 
+# %%
 df.columns = df.columns.str.strip()
 
 # %%
