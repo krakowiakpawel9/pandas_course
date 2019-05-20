@@ -5,6 +5,10 @@ import pandas as pd
 
 
 # %% creating first DataFrame 2x3
+
+df = pd.DataFrame(data=[12, 14, 16], index=['first', 'second', 'third'],
+                  columns=['col_1'])
+
 df = pd.DataFrame(data=[[12, 14, 16], [45, 23, 12]], index=['first', 'second'],
                   columns=['col_1', 'col_2', 'col_3'])
 

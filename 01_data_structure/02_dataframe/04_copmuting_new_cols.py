@@ -11,8 +11,7 @@ df.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
 # %% compute new columns
 df['average'] = (df['Open'] + df['Close']) / 2
 
-df['daily_change'] = df['Close']
-df['daily_change'] = df['daily_change'] / df['Close'].shift(1) -1
+df['daily_change'] = df['Close'] / df['Close'].shift(1) -1
 
 # %% compute new columns with assign()
 df = df.assign(avg = (df['Open'] + df['Close']) / 2)
