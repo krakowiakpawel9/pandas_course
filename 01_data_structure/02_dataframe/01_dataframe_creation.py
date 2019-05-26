@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import numpy as np
 import pandas as pd
 
@@ -47,7 +46,8 @@ df.index
 df.columns
 
 # %% creating DataFrame from a list of dictionaries
-list_of_dicts = [{'apple':1, 'orange': 4}, {'apple':2, 'orange':3, 'mango':2}]
+list_of_dicts = [{'apple': 1, 'orange': 4},
+                 {'apple': 2, 'orange': 3, 'mango': 2}]
 
 df = pd.DataFrame(list_of_dicts)
 
@@ -62,7 +62,3 @@ d = {'wig20': ['PKN Orlen', 'PKO BP', 'LPP'],
      'mWig40': ['Amica', 'Playway', 'Benefit']}
 
 df = pd.DataFrame(d)
-
-
-
-

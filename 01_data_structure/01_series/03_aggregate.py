@@ -22,4 +22,3 @@ std = s.aggregate(np.std)
 stats = s.aggregate(['min', 'max', 'sum', 'mean'])
 
 stats_np = s.aggregate([np.prod, np.mean, np.sum, np.std, np.median])
-

@@ -22,11 +22,11 @@ print(s.index)
 s = pd.Series(A)
 
 # %% Example 4 - creating Series from python dictionary, text values
-stocks = {'Apple':'USA', 'CD Projekt':'Poland', 'Amazon':'USA'}
+stocks = {'Apple': 'USA', 'CD Projekt': 'Poland', 'Amazon': 'USA'}
 stocks_series = pd.Series(stocks, name='stock')
 
 # %% Example 5 - creating Series from python dictionary, text values
-stocks_price = {'Apple':196, 'CD Projet':212, 'Amazon':1877}
+stocks_price = {'Apple': 196, 'CD Projet': 212, 'Amazon': 1877}
 stocks_price_series = pd.Series(stocks_price)
 
 # %% Example 6 - convert Series to numpy array
@@ -51,7 +51,7 @@ s[::2]
 s[::3]
 
 # %% Example 9 - checking memberdhip
-stocks_price = {'Apple':196, 'CD Projet':212, 'Amazon':1877}
+stocks_price = {'Apple': 196, 'CD Projet': 212, 'Amazon': 1877}
 stocks_price_series = pd.Series(stocks_price)
 
 'Apple' in stocks_price
