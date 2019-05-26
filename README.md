@@ -4,19 +4,13 @@ This is an introductory course to pandas python library.
 ## PL Version
 Planujesz swoją karierę w takich obszarach jak:
 
-analiza danych
-
-analiza biznesowa
-
-data science
-
-big data
-
-sztuczna inteligencja (uczenie maszynowe, uczenie głębokie)
-
-ekonomia
-
-statystyka
+* analiza danych
+* analiza biznesowa
+* data science
+* big data
+* sztuczna inteligencja (uczenie maszynowe, uczenie głębokie)
+* ekonomia
+* statystyka
 
 analityka internetowa
 
