@@ -2,6 +2,8 @@
 This is an introductory course to pandas python library.
 
 ## PL Version
+Repozytorium jest częścią kursu z wprowadzenia do data science w języku Python dostępnym na platformie **Udemy.com**
+
 Planujesz swoją karierę w takich obszarach jak:
 
 * analiza danych
