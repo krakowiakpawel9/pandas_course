@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -22,4 +21,3 @@ plt.matshow(clean_price.corr())
 sns.heatmap(corr_matrix,
             xticklabels=corr_matrix.columns.values,
             yticklabels=corr_matrix.columns.values)
-

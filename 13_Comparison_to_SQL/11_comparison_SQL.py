@@ -18,7 +18,7 @@ print(retail.head())
 
 # %% preprocessing
 # drop rows with null
-retail = retail[retail['CustomerID'].notnull()] 
+retail = retail[retail['CustomerID'].notnull()]
 
 # convert type to string
 retail['CustomerID'] = retail['CustomerID'].apply(lambda x: str(int(x)))
@@ -77,12 +77,13 @@ FROM retial
 WHERE CustomerID='17850' or Country='France';
 """
 
-query = retail[(retail['CustomerID'] == '17850') | (retail['Country'] == 'France')]
+query = retail[(retail['CustomerID'] == '17850') | (retail['Country']
+               == 'France')]
 query_ = retail.query('CustomerID == "17850" or Country == "France"')
 
 # %% isnull
 """
-SELECT * 
+SELECT *
 FROM retail
 WHERE InvoiceNo is null;
 """
@@ -91,7 +92,7 @@ retail[retail['StockCode'].isnull()]
 
 # %% is not null
 """
-SELECT * 
+SELECT *
 FROM retail
 WHERE InvoiceNo is not null;
 """
@@ -116,22 +117,25 @@ FROM retial
 GROUP BY CustomerID;
 """
 revenue_by_cust_id = retail.groupby('CustomerID').\
-                            aggregate({'Revenue':np.mean, 'CustomerID':np.size}).\
-                            rename(columns={'Revenue':'AverageRevenue', 'CustomerID':'Count CustomerID'})
+                            aggregate({'Revenue': np.mean,
+                                       'CustomerID': np.size}).\
+                            rename(columns={'Revenue': 'AverageRevenue',
+                                            'CustomerID': 'Count CustomerID'})
 
 # %%
 retail['InvoiceDateDay'] = retail['InvoiceDate'].dt.day
 
 # %%
-query = retail.groupby('InvoiceDateDay').aggregate({'Revenue':np.sum})
+query = retail.groupby('InvoiceDateDay').aggregate({'Revenue': np.sum})
 
 query.plot(kind='bar', color='black', alpha=0.5, title='Sales by day')
 
 # %%
-day_9 = retail[(retail['InvoiceDate'] > '2010-12-09') & (retail['InvoiceDate'] < '2010-12-10')]
-day_9['Hour'] = day_9['InvoiceDate'].dt.hour 
-     
-query = day_9.groupby('Hour').aggregate({'Revenue':np.sum})
+day_9 = retail[(retail['InvoiceDate'] > '2010-12-09') &
+               (retail['InvoiceDate'] < '2010-12-10')]
+day_9['Hour'] = day_9['InvoiceDate'].dt.hour
+
+query = day_9.groupby('Hour').aggregate({'Revenue': np.sum})
 
 query.plot(kind='bar', color='blue', alpha=0.5, title='Sales by hour')
 
@@ -150,13 +154,3 @@ ORDER BY Quantity
 LIMIT 10;
 """
 query = retail.nsmallest(5, columns='Quantity')
-
-
-
-
-
-
-
-
-
-

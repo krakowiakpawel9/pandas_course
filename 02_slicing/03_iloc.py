@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-# %%
+# %% creating dataset
 np.random.seed(0)
 df = pd.DataFrame(np.random.randn(20, 5),
                   columns=list('abcde'),

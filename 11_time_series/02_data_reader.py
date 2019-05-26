@@ -4,6 +4,8 @@ from pandas_datareader.data import DataReader
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
+
+
 # %%
 amazon = DataReader('AMZN', 'stooq')
 amazon.to_csv('data.csv')
@@ -14,7 +16,9 @@ amazon['Close'].plot(alpha=0.5)
 
 # %%
 amazon['Close'].plot(alpha=0.7)
-amazon.resample('BQ').mean()['Close'].plot(color='green', style='--', alpha=0.7)
+amazon.resample('BQ').mean()['Close'].\
+       plot(color='green', style='--', alpha=0.7)
+
 plt.legend(['price', 'quarter average'])
 
 # %% shifting
@@ -46,4 +50,3 @@ amazon['Close'].rolling(120).std().plot(ax=ax[1], logy=True)
 
 ax[0].legend(['price', 'rolling_mean'])
 ax[1].legend(['rolling_std'])
-

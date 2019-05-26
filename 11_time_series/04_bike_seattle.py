@@ -11,7 +11,8 @@ sns.set()
 """
 http://data.seattle.gov/
 """
-url = 'https://data.seattle.gov/api/views/65db-xm6k/rows.csv?accessType=DOWNLOAD'
+url = ('https://data.seattle.gov/api/views/65db-xm6k/'
+      'rows.csv?accessType=DOWNLOAD')
 
 wget.download(url)
 
@@ -23,7 +24,7 @@ df = df.sort_index()
 # %%
 df.columns = ['East', 'West']
 df['Total'] = df.East + df.West
-  
+
 # %%
 df.isnull().sum()
 df[df['West'].isnull()]
@@ -51,4 +52,3 @@ by_weekend_time = df.groupby(['weekend', df.index.time]).mean()
 fig, ax = plt.subplots(1, 2, figsize=(14, 5))
 by_weekend_time.loc['Weekday'].plot(ax=ax[0], xticks=hour_ticks)
 by_weekend_time.loc['Weekend'].plot(ax=ax[1], xticks=hour_ticks)
-

@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+sns.set()
+
+# %%
 pd.set_option('display.max_rows', 999)
 pd.set_option('precision', 3)
 

@@ -11,7 +11,7 @@ s = pd.Series(np.random.rand(10), name='x')
 # %% concat
 df = pd.concat([df1, df2, df3], ignore_index=True)
 
-# %% 
+# %%
 df = pd.concat([df1, df2, df3])
 df.reset_index()
 

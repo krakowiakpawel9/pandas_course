@@ -100,7 +100,7 @@ df = pd.DataFrame({'num_val': pd.Series(np.random.rand(100)),
                    'time_val': pd.Series(rng)})
 
 df['time_val_min'] = df['time_val'].dt.minute
-  
+
 df['time_val_hour'] = df['time_val'].dt.hour
 
 # %%
@@ -115,8 +115,3 @@ df = pd.DataFrame({'num_val': pd.Series(np.random.rand(100)),
 df['time_val_day_of_week'] = df['time_val'].dt.dayofweek
 df['time_val_day_of_year'] = df['time_val'].dt.dayofyear
 df['time_val_week_of_day'] = df['time_val'].dt.weekofyear
-  
-  
-  
-  
-  

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 # %%
@@ -31,7 +30,8 @@ df.plot.hist(bins=40, cmap='viridis', alpha=0.5,
              title='Different Normal Distribution')
 
 # %% cumulative plot
-df['mu_8_sigma_3'].plot.hist(cumulative=True,bins=1000, color='green', alpha=0.5)
+df['mu_8_sigma_3'].plot.hist(cumulative=True, bins=1000, color='green',
+                             alpha=0.5)
 
 # %%
 df.hist(sharex=True, sharey=True)

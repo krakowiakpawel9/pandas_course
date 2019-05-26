@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 
 df = pd.read_csv('./data/ten_d.csv', index_col=0)
@@ -12,14 +10,15 @@ df['Daily_Change'] = df['Close'].pct_change()
 
 # %%
 df['Daily_Change_Manually'] = df['Close'] / df['Close'].shift() - 1
-  
+
 # %%
 df['5_Days_Change'] = df['Close'].pct_change(periods=5)
 
 # %%
-df['Close_To_Open'] = df[['Open', 'Close']].pct_change(axis=1).drop('Open', axis=1)
+df['Close_To_Open'] = df[['Open', 'Close']].pct_change(axis=1).\
+                                            drop('Open', axis=1)
 
-# %% 
+# %%
 clean_price = df[['Open', 'High', 'Low', 'Close']]
 
 daily_change = clean_price.pct_change()
@@ -36,6 +35,5 @@ for i in ax.patches:
 
 
 for i in ax.patches:
-    ax.text(i.get_x() + 0.13, i.get_height() + 0.005, str(round(100 * i.get_height(), 2)) + '%')
-    
-# %%
+    ax.text(i.get_x() + 0.13, i.get_height() + 0.005,
+            str(round(100 * i.get_height(), 2)) + '%')

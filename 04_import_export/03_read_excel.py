@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import pandas as pd
 
 
@@ -14,6 +13,3 @@ df_msft = pd.read_excel('./data/companies.xlsx', sheet_name='microsoft')
 
 # %% read google stock price
 df_google = pd.read_excel('./data/companies.xlsx', sheet_name='google')
-
-
-

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+sns.set()
 
 
-dft =pd.DataFrame({'price': np.random.randn(97)},
+dft = pd.DataFrame({'price': np.random.randn(97)},
                    index=pd.date_range('20190101 09:00:00', periods=97,
                                        freq='5min'))
 

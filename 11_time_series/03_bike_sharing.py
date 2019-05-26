@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
-import numpy as np
 import wget
-import os, zipfile
-import matplotlib.pyplot as plt
+import os
+import zipfile
 import seaborn as sns
 sns.set()
 
@@ -16,9 +15,9 @@ wget.download(url)
 z = zipfile.ZipFile('Bike-Sharing-Dataset.zip')
 for file in z.namelist():
     if file.endswith('/'):
-        os.makedirs(f)
+        os.makedirs(file)
     print(file)
-    
+
 z.extractall('./data/')
 
 # %%

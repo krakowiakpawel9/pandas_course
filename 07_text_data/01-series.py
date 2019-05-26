@@ -29,4 +29,3 @@ df.columns = df.columns.str.lower()
 
 # %%
 df.columns = df.columns.str.replace(' ', '_')
-

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-
 import pandas as pd
 import numpy as np
 
-# %%
+# %% creating dataset
 np.random.seed(0)
 df = pd.DataFrame(np.random.randn(31, 5),
                   columns=list('abcde'),
@@ -26,4 +25,4 @@ df[~(df < 0)]
 df[(df < 0) & ~(df < 0)]
 df[(df < 0) | ~(df < 0)]
 
-# %% 
+# %%

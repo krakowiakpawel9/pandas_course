@@ -8,11 +8,11 @@ df = pd.DataFrame(np.random.randn(10, 4),
 
 # %%
 for row in df.values:
-    switch = np.random.choice([0 ,1])
+    switch = np.random.choice([0, 1])
     if switch:
         i = np.random.choice([0, 1, 2, 3])
         row[i] = np.nan
-    
+
 # %%
 
 df.fillna(0)
@@ -22,7 +22,7 @@ df['two'] = df['two'].fillna('Special Access Needed')
 # %% fill with mean
 df = df.fillna(df.mean())
 
-# %% 
+# %%
 df = df.fillna(df.median())
 
 # %%

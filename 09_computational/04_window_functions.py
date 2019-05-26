@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+sns.set()
 
 
 """
@@ -44,7 +43,7 @@ close.plot(color='black')
 for i in [5, 10, 15, 20, 60]:
     close_rol = close.rolling(window=i).mean()
     close_rol.plot()
-    
+
 # %% simple strategy
 close.plot(color='black')
 for i in [5]:
@@ -52,7 +51,7 @@ for i in [5]:
     close_rol_min.plot()
     close_rol_max = close.rolling(window=i).max()
     close_rol_max.plot()
-    
+
 # %% DataFrame
 clean_price.rolling(window=20).mean().plot()
 close.plot()
@@ -67,8 +66,3 @@ clean_price.rolling(window=20).mean().plot(subplots=True)
 # %% apply, custom indicator
 aa = close.rolling(window=10).apply(lambda x: abs(x - x.mean()).mean())
 aa.plot()
-
-
-
-
-

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -28,7 +27,8 @@ type_freq.plot(kind='pie', cmap='viridis', fontsize=14,
                title='Reviews based on type')
 
 # %%
-agg = df[['Genres', 'Rating', 'Type']].groupby(['Genres', 'Type']).agg({'Rating':['count', 'mean']})
+agg = df[['Genres', 'Rating', 'Type']].groupby(['Genres', 'Type']).
+                                       agg({'Rating':['count', 'mean']})
 agg.columns = ['_'.join(x) for x in agg.columns.ravel()]
 agg = agg.sort_values(by='Rating_count', ascending=False)
 agg = agg[agg['Rating_count'] > 100]

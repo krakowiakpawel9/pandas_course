@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+sns.set()
 
 
 # setting max rows to display
@@ -23,4 +23,3 @@ pd.get_option('display.max_rows')
 
 pd.describe_option('display.max_rows')
 pd.describe_option('mode.sim_interactive')
-

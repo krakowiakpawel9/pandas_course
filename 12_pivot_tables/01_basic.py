@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
-import numpy as np
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 
 # %%
@@ -13,7 +13,9 @@ tit.groupby(['sex', 'survived']).size()
 
 # %%
 tit.groupby('sex').mean()['survived']
-tit.groupby(['sex', 'class']).mean()['survived'].unstack().plot(kind='bar', subplots=True, layout=(1,3), sharey=True)
+tit.groupby(['sex', 'class']).mean()['survived'].unstack().\
+    plot(kind='bar', subplots=True, layout=(1, 3), sharey=True)
+
 tit.pivot_table('survived', index='sex', columns='class')
 tit.pivot_table('survived', index='sex', columns='class')
 
@@ -30,15 +32,18 @@ ax[0].legend('male')
 ax[1].legend('female')
 
 # %%
-r = pd.pivot_table(tit, values='age', index='survived', columns='sex', aggfunc='count')
+r = pd.pivot_table(tit, values='age', index='survived', columns='sex',
+                   aggfunc='count')
 r.plot(subplots=True, kind='bar', sharey=True, layout=(1, 2))
 
 # %%
-r = pd.pivot_table(tit, values='age', index='survived', columns='who', aggfunc='count')
+r = pd.pivot_table(tit, values='age', index='survived', columns='who',
+                   aggfunc='count')
 r.plot(subplots=True, kind='bar', sharey=True, layout=(1, 3), cmap='viridis')
 
 # %%
-r = pd.pivot_table(tit, values='age', index='survived', columns=['sex', 'who'], aggfunc='count')
+r = pd.pivot_table(tit, values='age', index='survived', columns=['sex', 'who'],
+                   aggfunc='count')
 r.unstack(level=0)
 
 # %%
@@ -49,4 +54,5 @@ tit['qbin'] = pd.qcut(age, 4)
 tit.groupby('qbin').size()
 
 # %%
-tit.pivot_table(index='sex', columns='class', aggfunc={'survived':sum, 'fare':'mean'})
+tit.pivot_table(index='sex', columns='class',
+                aggfunc={'survived': sum, 'fare': 'mean'})

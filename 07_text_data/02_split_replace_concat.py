@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
 
 
-s = pd.Series(['#sport#good#time', '#workout#free#time', '#summer#holiday#hot'],
-              name='hashtags')
+s = pd.Series(['#sport#good#time',
+               '#workout#free#time',
+               '#summer#holiday#hot'],
+               name='hashtags')
 
 # %%
 split = s.str.split('#')
@@ -36,4 +37,3 @@ s.str.replace('#', '_')
 s.str.replace('#', '')
 
 split_2.drop(0)
-# %%

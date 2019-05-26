@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+sns.set()
 
 
 df = pd.read_csv('./data/ten_d.csv', index_col=0)
@@ -20,7 +20,8 @@ df_stats = df_stats.rolling(window=10).agg([np.mean, np.std])
 
 # %% different aggregation
 
-diff_agg = df.rolling(window=20).agg({'Close': [np.std, np.mean], 'Volume': np.std})
+diff_agg = df.rolling(window=20).agg({'Close': [np.std, np.mean],
+                                      'Volume': np.std})
 
 # %%
 df = (df - df.mean()) / df.std()
@@ -29,4 +30,3 @@ df.plot()
 
 # %%
 df.rolling(window=len(df), min_periods=1).mean()[:5]
-

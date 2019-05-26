@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-
-import numpy as np
 import pandas as pd
 
 
@@ -20,24 +18,24 @@ plw.columns = ['Open', 'High', 'Low', 'Close', 'Volume']
 df = pd.merge(ten, plw, how='inner', left_index=True, right_index=True)
 
 # %%
-df = pd.merge(ten, plw, how='inner', left_index=True, right_index=True, 
+df = pd.merge(ten, plw, how='inner', left_index=True, right_index=True,
               suffixes=('_TEN', '_PLW'))
 
 # %% merge on index, outer
 df = pd.merge(ten, plw, how='outer', left_index=True, right_index=True)
 
 # %%
-df = pd.merge(ten, plw, how='outer', left_index=True, right_index=True, 
+df = pd.merge(ten, plw, how='outer', left_index=True, right_index=True,
               suffixes=('_TEN', '_PLW'))
 
 # %% generate daily changes
 ten['Change'] = ten['Close'] / ten['Close'].shift() - 1
 plw['Change'] = plw['Close'] / plw['Close'].shift() - 1
-      
+
 # %% generate flag 1 if change > 0, 0 if change < 0
 ten['Flag'] = ten['Change'] > 0
 plw['Flag'] = plw['Change'] > 0
-      
+
 ten['Flag'] = ten['Flag'].apply(int)
 plw['Flag'] = plw['Flag'].apply(int)
 
@@ -51,6 +49,3 @@ correlation_matrix = df.corr()
 df_positive = df[(df['Flag_TEN'] == 1) & (df['Flag_PLW'] == 1)]
 
 df_positive_2 = df.query('(Flag_TEN == 1) & (Flag_PLW == 1)')
-
-
-

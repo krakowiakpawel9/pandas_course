@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import numpy as np
 import pandas as pd
 
 
@@ -8,7 +7,7 @@ split_string = string.split(' ')
 
 s = pd.Series(split_string)
 
-# %
+# %%
 s.str.contains(r'[0-9]')
 s.str.contains(r'[a-z]')
 
