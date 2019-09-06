@@ -2,7 +2,7 @@
 This is an introductory course to pandas python library.
 
 ## PL Version
-Repozytorium jest częścią kursu z wprowadzenia do data science w języku Python dostępnym na platformie [Udemy.com](https://www.udemy.com/wprowadzenie-data-science/)
+Repozytorium jest częścią kursu [Wprowadzenie do data science w języku Python - Pandas](https://www.udemy.com/course/wprowadzenie-data-science/?couponCode=GITHUB) dostępnym na platformie [Udemy.com](https://www.udemy.com/wprowadzenie-data-science/)
 
 Planujesz swoją karierę w takich obszarach jak:
 
