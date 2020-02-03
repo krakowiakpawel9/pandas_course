@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+"""
+@author: krakowiakpawel9@gmail.com
+@site: e-smartdata.org
+"""
+
 import pandas as pd
 import seaborn as sns
 sns.set()

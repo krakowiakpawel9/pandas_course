@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+"""
+@author: krakowiakpawel9@gmail.com
+@site: e-smartdata.org
+"""
+
 import pandas as pd
 
 d1 = {'date': ['2019-01-01', '2019-01-01', '2019-01-02', '2019-01-02'],

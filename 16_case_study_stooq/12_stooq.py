@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+"""
+@author: krakowiakpawel9@gmail.com
+@site: e-smartdata.org
+"""
+
 from pandas_datareader.stooq import StooqDailyReader
 import pandas as pd
 

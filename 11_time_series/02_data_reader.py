@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+"""
+@author: krakowiakpawel9@gmail.com
+@site: e-smartdata.org
+"""
+
 import pandas as pd
 from pandas_datareader.data import DataReader
 import matplotlib.pyplot as plt

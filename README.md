@@ -1,8 +1,8 @@
-# pandas_course
-This is an introductory course to pandas python library.
 
-## PL Version
-Repozytorium jest częścią kursu [Wprowadzenie do data science w języku Python - Pandas](https://www.udemy.com/course/wprowadzenie-data-science/?couponCode=GITHUB) dostępnym na platformie [Udemy.com](https://www.udemy.com/wprowadzenie-data-science/)
+
+## [e-smartdata.org](https://e-smartdata.org/)
+### Kurs: Wprowadzenie do data science w języku Python - Pandas
+Repozytorium jest częścią kursu [Wprowadzenie do data science w języku Python - Pandas](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas) dostępnym na platformie [e-smartdata.org](https://e-smartdata.org/)
 
 Planujesz swoją karierę w takich obszarach jak:
 
