@@ -1,5 +1,3 @@
-
-
 ## [e-smartdata.org](https://e-smartdata.org/)
 ### Kurs: Wprowadzenie do data science w języku Python - Pandas
 Repozytorium jest częścią kursu [Wprowadzenie do data science w języku Python - Pandas (12.5h)](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas) dostępnym na platformie [e-smartdata.org](https://e-smartdata.org/)
