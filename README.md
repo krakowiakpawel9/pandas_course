@@ -1,6 +1,51 @@
 ## [e-smartdata.org](https://e-smartdata.org/)
-### Kurs: [Wprowadzenie do data science w języku Python - Pandas (12.5h)](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas)
-Repozytorium jest częścią kursu [Wprowadzenie do data science w języku Python - Pandas (12.5h)](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas) dostępnym na platformie [e-smartdata.org](https://e-smartdata.org/)
+## Kurs: Wprowadzenie do data science w języku Python - Pandas (12.5h)
+Repozytorium jest częścią kursu **Wprowadzenie do data science w języku Python - Pandas (12.5h)** dostępnym na platformie:
+* [e-smartdata.org](https://e-smartdata.org/):
+  * [Wprowadzenie do data science w języku Python - Pandas (12.5h)](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas)
+* Udemy.com:
+  * [Wprowadzenie do data science w języku Python - Pandas (12.5h)](https://www.udemy.com/course/wprowadzenie-data-science/?referralCode=D85D646D30D785FD5277)
+
+### REKOMENDOWANE ŚCIEŻKI UCZENIA
+
+#### DATA SCIENTIST / MACHINE LEARNING ENGINEER:
+
+* Programowanie w języku Python - od A do Z - 2020
+* Wprowadzenie do data science w języku Python - Pandas
+* Interaktywne wizualizacje danych w języku Python - Plotly
+* Data Science Bootcamp w języku Python - od A do Z
+* Machine Learning Bootcamp w języku Python cz.I - od A do Z
+* Machine Learning Bootcamp w języku Python cz.II - od A do Z
+
+#### DATA SCIENTIST / DEEP LEARNING ENGINEER
+
+* Programowanie w języku Python - od A do Z - 2020
+* Wprowadzenie do data science w języku Python - Pandas
+* Interaktywne wizualizacje danych w języku Python - Plotly
+* Data Science Bootcamp w języku Python - od A do Z
+* Machine Learning Bootcamp w języku Python cz.I - od A do Z
+* Machine Learning Bootcamp w języku Python cz.II - od A do Z
+* Wprowadzenie do sieci neuronowych - Tensorflow 2.0 + Keras
+* Deep Learning w języku Python - Konwolucyjne Sieci Neuronowe
+* Artificial Intelligence – Computer Vision w języku Python
+
+#### BI ANALYST / DATA ANALYST:
+
+* Programowanie w języku Python - od A do Z - 2020
+* Wprowadzenie do data science w języku Python - Pandas
+* Interaktywne wizualizacje danych w języku Python - Plotly
+* Twórz nowoczesne aplikacje webowe w Pythonie - Dash, Plotly
+* Data Science Bootcamp w języku Python - od A do Z
+
+#### BIG DATA ANALYST:
+
+* Programowanie w języku Python - od A do Z - 2020
+* Wprowadzenie do data science w języku Python - Pandas
+* Interaktywne wizualizacje danych w języku Python - Plotly
+* Big Data, Hadoop oraz MapReduce w języku Python
+* Big Data: Analiza danych przy użyciu SQL oraz BigQuery (GCP)
+
+### OPIS KURSU
 
 Planujesz swoją karierę w takich obszarach jak:
 
