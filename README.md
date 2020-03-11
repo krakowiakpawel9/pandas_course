@@ -1,5 +1,5 @@
-## [e-smartdata.org](https://e-smartdata.org/) - kursy online
-## Kurs: Wprowadzenie do data science w języku Python - Pandas - 2020 (12.5h) :computer:
+## [e-smartdata.org](https://e-smartdata.org/) - kursy online :computer:
+## Kurs: Wprowadzenie do data science w języku Python - Pandas - 2020 (12.5h) 
 Repozytorium jest częścią kursu **Wprowadzenie do data science w języku Python - Pandas - 2020 (12.5h)** dostępnym na platformie:
 * [e-smartdata.org](https://e-smartdata.org/):
   * :point_right: [Wprowadzenie do data science w języku Python - Pandas - 2020 (12.5h)](https://e-smartdata.teachable.com/p/wprowadzenie-do-data-science-w-jezyku-python-pandas)
